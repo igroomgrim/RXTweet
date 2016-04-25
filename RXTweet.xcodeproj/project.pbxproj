@@ -78,14 +78,46 @@
 		98176A6E1C05A34200946AAD /* RXTweet */ = {
 			isa = PBXGroup;
 			children = (
-				98176A6F1C05A34200946AAD /* AppDelegate.swift */,
-				98176A711C05A34200946AAD /* ViewController.swift */,
-				98176A731C05A34200946AAD /* Main.storyboard */,
-				98176A761C05A34200946AAD /* Assets.xcassets */,
-				98176A781C05A34200946AAD /* LaunchScreen.storyboard */,
-				98176A7B1C05A34200946AAD /* Info.plist */,
+				9836906F1CCDD821008E65A6 /* AppDelegate */,
+				983690711CCDD838008E65A6 /* ViewController */,
+				983690721CCDD840008E65A6 /* Storyboard */,
+				983690701CCDD82F008E65A6 /* Assets */,
 			);
 			path = RXTweet;
+			sourceTree = "<group>";
+		};
+		9836906F1CCDD821008E65A6 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				98176A6F1C05A34200946AAD /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		983690701CCDD82F008E65A6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				98176A761C05A34200946AAD /* Assets.xcassets */,
+				98176A7B1C05A34200946AAD /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		983690711CCDD838008E65A6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				98176A711C05A34200946AAD /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		983690721CCDD840008E65A6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				98176A731C05A34200946AAD /* Main.storyboard */,
+				98176A781C05A34200946AAD /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
