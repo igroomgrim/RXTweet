@@ -3,13 +3,19 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'RXTweet' do
-pod 'RxSwift', '~> 2.0.0-beta'
-pod 'RxCocoa', '~> 2.0.0-beta'
-pod 'RxBlocking', '~> 2.0.0-beta'
 
+#RX
+pod 'RxSwift',    '~> 2.0'
+pod 'RxCocoa',    '~> 2.0'
+
+#Network
 pod 'Moya/RxSwift'
-pod 'SnapKit', '~> 0.15.0'
 
-pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+#JSON
+pod 'SwiftyJSON'
+
+#HUD
+pod 'SVProgressHUD', '~> 2.0.3'
+
 end
 

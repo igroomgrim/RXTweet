@@ -1,44 +1,32 @@
 PODS:
-  - Alamofire (3.1.3)
-  - Moya/Core (4.5.0):
+  - Alamofire (3.3.1)
+  - Moya/Core (6.4.0):
     - Alamofire (~> 3.0)
-  - Moya/ReactiveCore (4.5.0):
+    - Result (~> 2.0)
+  - Moya/RxSwift (6.4.0):
     - Moya/Core
-  - Moya/RxSwift (4.5.0):
-    - Moya/ReactiveCore
-    - RxSwift (~> 2.0.0-beta)
-  - RxBlocking (2.0.0-beta.3):
-    - RxSwift (~> 2.0.0-beta)
-  - RxCocoa (2.0.0-beta.3):
-    - RxSwift (~> 2.0.0-beta)
-  - RxSwift (2.0.0-beta.3)
-  - SnapKit (0.15.0)
-  - SwiftyJSON (2.3.1)
+    - RxSwift (~> 2.0)
+  - Result (2.0.0)
+  - RxCocoa (2.4):
+    - RxSwift (~> 2.4)
+  - RxSwift (2.4)
+  - SVProgressHUD (2.0.3)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Moya/RxSwift
-  - RxBlocking (~> 2.0.0-beta)
-  - RxCocoa (~> 2.0.0-beta)
-  - RxSwift (~> 2.0.0-beta)
-  - SnapKit (~> 0.15.0)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-
-EXTERNAL SOURCES:
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-
-CHECKOUT OPTIONS:
-  SwiftyJSON:
-    :commit: 5ccffc14df519cf29b8dfbc7c1698373f2a6da40
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  - RxCocoa (~> 2.0)
+  - RxSwift (~> 2.0)
+  - SVProgressHUD (~> 2.0.3)
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
-  Moya: 82813e5bf27564535cd9cdf4e9db61fd220f7f8e
-  RxBlocking: 331f8bdedf77198f8ff1a37f09c492f1f4f631e5
-  RxCocoa: 1472006304b296d03c847f78b21384523cc4902e
-  RxSwift: 19fbe885b404d1d36d42ac8535134739a9b42952
-  SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
-  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  Moya: 4d526954c8afd79820991393d40d7d8af756ceee
+  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61
+  RxSwift: 67b9ef4e8b34fb394e200e754c6a09cc16559f94
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
