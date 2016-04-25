@@ -13,6 +13,7 @@ pod 'Moya/RxSwift'
 
 #JSON
 pod 'SwiftyJSON'
+pod 'ObjectMapper', '~> 1.2'
 
 #HUD
 pod 'SVProgressHUD', '~> 2.0.3'

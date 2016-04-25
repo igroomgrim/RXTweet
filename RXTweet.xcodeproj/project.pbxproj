@@ -13,6 +13,8 @@
 		98176A751C05A34200946AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98176A731C05A34200946AAD /* Main.storyboard */; };
 		98176A771C05A34200946AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98176A761C05A34200946AAD /* Assets.xcassets */; };
 		98176A7A1C05A34200946AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98176A781C05A34200946AAD /* LaunchScreen.storyboard */; };
+		98ACC0421CCE0E6000A1F3F8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACC0401CCE0E6000A1F3F8 /* UserCell.swift */; };
+		98ACC0431CCE0E6000A1F3F8 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98ACC0411CCE0E6000A1F3F8 /* UserCell.xib */; };
 		98C3A2171CCDDC00000B5327 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C3A2161CCDDC00000B5327 /* GithubApi.swift */; };
 		98C3A21A1CCDFF3E000B5327 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C3A2191CCDFF3E000B5327 /* Extension.swift */; };
 		98C3A21D1CCE0408000B5327 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C3A21C1CCE0408000B5327 /* User.swift */; };
@@ -27,6 +29,8 @@
 		98176A761C05A34200946AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98176A791C05A34200946AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98176A7B1C05A34200946AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98ACC0401CCE0E6000A1F3F8 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = View/UserCell.swift; sourceTree = "<group>"; };
+		98ACC0411CCE0E6000A1F3F8 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserCell.xib; path = View/UserCell.xib; sourceTree = "<group>"; };
 		98C3A2161CCDDC00000B5327 /* GithubApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubApi.swift; path = Helper/GithubApi.swift; sourceTree = "<group>"; };
 		98C3A2191CCDFF3E000B5327 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Helper/Extension.swift; sourceTree = "<group>"; };
 		98C3A21C1CCE0408000B5327 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				983690721CCDD840008E65A6 /* Storyboard */,
 				983690701CCDD82F008E65A6 /* Assets */,
 				98C3A21C1CCE0408000B5327 /* User.swift */,
+				98ACC0401CCE0E6000A1F3F8 /* UserCell.swift */,
+				98ACC0411CCE0E6000A1F3F8 /* UserCell.xib */,
 			);
 			path = RXTweet;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98ACC0431CCE0E6000A1F3F8 /* UserCell.xib in Resources */,
 				98176A7A1C05A34200946AAD /* LaunchScreen.storyboard in Resources */,
 				98176A771C05A34200946AAD /* Assets.xcassets in Resources */,
 				98176A751C05A34200946AAD /* Main.storyboard in Resources */,
@@ -261,6 +268,7 @@
 			files = (
 				98C3A2171CCDDC00000B5327 /* GithubApi.swift in Sources */,
 				98176A721C05A34200946AAD /* ViewController.swift in Sources */,
+				98ACC0421CCE0E6000A1F3F8 /* UserCell.swift in Sources */,
 				98176A701C05A34200946AAD /* AppDelegate.swift in Sources */,
 				98C3A21D1CCE0408000B5327 /* User.swift in Sources */,
 				98C3A21A1CCDFF3E000B5327 /* Extension.swift in Sources */,
