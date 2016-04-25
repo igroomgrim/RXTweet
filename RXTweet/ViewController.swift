@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import ObjectMapper
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var refreshButton: UIButton!
@@ -35,8 +35,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func setup() {
         
         // TableView
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.registerNib(UINib(nibName: UserCell.identifier,bundle: nil), forCellReuseIdentifier: UserCell.identifier)
         
         // Stream
@@ -56,66 +54,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         
         responseStream
-            .showErrorHUD()
-            .subscribeNext { responseJSON in
-                
-                guard let usersArray = Mapper<User>().mapArray(responseJSON) else { return }
-                self.users = usersArray
-                
-                self.tableView.reloadData()
-                self.hideLoadingHUD()
-            }.addDisposableTo(disposeBag)
-        
-        // Example
-        /*
-        responseStream
-            .subscribe { event in
-            switch event {
-                case .Next(let responseJson):
-                    print(responseJson)
-                break
-                case .Error(let error):
-                    print("Error : \(error)")
-                break
-                case .Completed:
-                    print("responseStream : Complete")
-                break
-            }
+        .showErrorHUD()
+        .map { (responseJSON) -> [User] in
+            
+            self.hideLoadingHUD()
+            
+            guard let usersArray = Mapper<User>().mapArray(responseJSON) else { return [] }
+            return usersArray
+        }
+        .bindTo(tableView.rx_itemsWithCellIdentifier(UserCell.identifier, cellType: UserCell.self)) { (row: Int, user: User, cell: UserCell) in
+                cell.textLabel?.text = user.username
         }.addDisposableTo(disposeBag)
-        */
+        
+        
+        // TableView Selected
+        let modelSelectedStream = tableView.rx_modelSelected(User)
+        let cellSelectedStream = tableView.rx_itemSelected
+        
+        Observable.zip(modelSelectedStream, cellSelectedStream) { (user, indexPath) -> () in
+            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            print(user.username)
+            print(user.repos_url)
+            print(user.html_url)
+        }
+        .subscribe()
+        .addDisposableTo(disposeBag)
         
     }
     
-    // MARK: TableView DataSource & Delegate
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UserCell.height
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier(UserCell.identifier, forIndexPath: indexPath)
-        cell.textLabel?.text = users[indexPath.row].username
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        let user = users[indexPath.row]
-        print(user.username)
-        print(user.html_url)
-        print(user.repos_url)
-    }
-
-
-
 }
 
