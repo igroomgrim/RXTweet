@@ -108,6 +108,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let user = users[indexPath.row]
+        print(user.username)
+        print(user.html_url)
+        print(user.repos_url)
     }
 
 

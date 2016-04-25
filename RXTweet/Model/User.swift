@@ -12,6 +12,8 @@ import ObjectMapper
 class User: Mappable {
     
     var username: String?
+    var html_url: String?
+    var repos_url: String?
     
     required init?(_ map: Map) {
         
@@ -19,6 +21,8 @@ class User: Mappable {
     
     func mapping(map: Map) {
         username <- map["login"]
+        html_url <- map["html_url"]
+        repos_url <- map["repos_url"]
     }
     
     
